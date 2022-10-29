@@ -20,7 +20,8 @@ In this project, I analyzed the correlation between emotions manifested in movie
 * Emotion Analysis of Text – the analysis is based on the NRC Sentiment and Emotion Lexicons. For further reading, fill free to read the [following article]( https://nrc.canada.ca/en/research-development/products-services/technical-advisory-services/sentiment-emotion-lexicons).
 * Correlation Matrix – Pearson correlation coefficient was calculated for every possible combinations of (1) two of the six emotions from the NRC Lexicons; (2) the emotions and the two polarities (an emotion could be either negative or positive); and (3) each emotion/polarity and the gross profits.
 While only the third type of correlation will answer my research question, I think the first two are essential for validating reasons.
-## Tech Stack
+## Tech stack
+* R – the entire process was done within an R file named ['analysis.R'](https://github.com/LolipopnJoker/Movies_Emotion_Analysis/blob/main/analysis.R) – from the cleaning process, through the analysis phase to the plotting of the results.
 ## Quick glance at the results
 ## Lessons learned and recommendation
 ## Limitation and what can be improved
