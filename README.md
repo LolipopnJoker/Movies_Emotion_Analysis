@@ -38,4 +38,35 @@ One of the improvements I am planning to add in the future is to build two thing
 
 &ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;&thinsp;&ensp;Those steps will make the project constantly up to date, as I intend to make the Python script run automatically once a week.
 ## Repository structure
+```bash
+│   analysis.R
+│   README.md
+│   .Rhistory
+│   .RData
+│
+├───subtitles
+│       1.srt
+|       2.srt
+|       3.srt
+|       4.srt
+|       ...
+│       910.srt
+│       911.srt
+│       912.srt
+│       913.srt
+│       914.srt
+│       915.srt
+│       916.srt
+│       917.srt
+│       918.srt
+│
+├───datasets
+│       dataset.csv
+│       new_dataset.csv
+│       new_dataset_ex.xlsx
+│       unwanted_words.txt
+│
+└───results
+        corr_matrix.jpeg
+```
 ## Run Locally
