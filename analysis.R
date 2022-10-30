@@ -17,11 +17,11 @@ suppressWarnings(library(glue)) # Importing glue
 suppressWarnings(library(corrplot)) # Importing corrplot
 suppressWarnings(library(psych)) # Importing psych
 
-DB  <- read.csv("G:/My Drive/Portfolio/Emotion Analysis/dataset.csv", row.names = 1) # Importing the data.
-                                                                                # The first column is
-                                                                                # row indexes, therefor
-                                                                                # the argument row.names
-                                                                                # is needed.
+DB  <- read.csv("G:/My Drive/Movies_Emotion_Analysis/dataset.csv", row.names = 1) # Importing the data.
+                                                                                  # The first column is
+                                                                                  # row indexes, therefor
+                                                                                  # the argument row.names
+                                                                                  # is needed.
 
 DB$Subtitles <- NA # Adding an empty column to store all the subtitles.
 
@@ -42,7 +42,7 @@ adding_subtitles <- function(){
   for (i in 1:number_of_subtitles_files){
     # Using the try function in order to make the loop run even if an STR file isn't valid.
     try({
-      subtitle_path <- glue('G:/My Drive/Portfolio/Emotion Analysis/subtitles/{i}.srt') # Path to the SRT file in position i
+      subtitle_path <- glue('G:/My Drive/Movies_Emotion_Analysis/subtitles/{i}.srt') # Path to the SRT file in position i
       subtitle <- suppressWarnings(t(read_srt(subtitle_path))) # Importing the SRT file in position i in a vertical matrix
       subtitle <- as.data.frame(subtitle) # Turning it into a data frame
       subtitle <- unite(subtitle, col = "subtitles", 1:ncol(subtitle), remove = TRUE, sep = " ") # Turning the matrix to 1X1
@@ -128,11 +128,12 @@ sub_DB <- full_DB[, (c(9, 19:28))] # Only the relevant data for the correlation 
 
 sub_DB$World.Sales..in... <- as.numeric(sub_DB$World.Sales..in...) # Turning the first column to numeric
 
+colnames(sub_DB)[1] <- "Sales"
+
 cor_for_table <- cor(sub_DB) # Calculating the correlation matrix
 
 corrplot(corr = cor_for_table,
          method = "number",
-         type = "lower",
-         title = "Movies subtitles and emotions")
+         type = "lower")
 
 corr.test(sub_DB)
