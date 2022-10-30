@@ -35,6 +35,7 @@ While only the third type of correlation will answer my research question, I thi
 One of the improvements I am planning to add in the future is to build two things:
     1.	A Python script that will retrieve the data from [IMDB's API]( https://developer.imdb.com/).
     2.	A database to store all the data (including variables such as the movie name, global profits, subtitles, etc.).
+    
 Those steps will make the project constantly up to date, as I intend to make the Python script run automatically once a week.
 ## Repository structure
 ## Run Locally
