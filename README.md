@@ -23,6 +23,8 @@ While only the third type of correlation will answer my research question, I thi
 ## Tech stack
 * R – the entire process was done within an R file named ['analysis.R'](https://github.com/LolipopnJoker/Movies_Emotion_Analysis/blob/main/analysis.R) – from the cleaning process, through the analysis phase to the plotting of the results.
 ## Quick glance at the results
+* Correlation Matrix:
+![](https://github.com/LolipopnJoker/Movies_Emotion_Analysis/blob/main/corr_matrix.jpeg)
 ## Lessons learned and recommendation
 ## Limitation and what can be improved
 ## Repository structure
