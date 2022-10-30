@@ -25,8 +25,10 @@ While only the third type of correlation will answer my research question, I thi
 ## Quick glance at the results
 * Correlation Matrix:
 ![](https://github.com/LolipopnJoker/Movies_Emotion_Analysis/blob/main/results/corr_matrix.jpeg)
-  * Out of all the correlations between emotions and the movie's profits, only the correlation between fear and profits was significant. In other words, we can say that  the more scary a movie is, the more profit it will make. 
+  * Out of all the correlations between emotions and the movie's profits, only the correlation between fear and profits was significant. In other words, we can say that  the more scary a movie is, the more profit it will make. We do have to keep in mind that while this correlation is significant, it is still relatively small (0.12 is considered small).
 ## Lessons learned and recommendation
 ## Limitation and what can be improved
+* Code - while my analysis code does run runs without errors, several improvements could be implemented:
+ * Repetitiveness - There is repetitiveness in some parts of the code, mainly in the data cleaning section. This repetitiveness doesn't stop the code from running but makes it harder to scale up if needed or detect bugs if something slightly changes in the code.
 ## Repository structure
 ## Run Locally
