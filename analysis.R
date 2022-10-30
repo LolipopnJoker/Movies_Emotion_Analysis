@@ -17,11 +17,11 @@ suppressWarnings(library(glue)) # Importing glue
 suppressWarnings(library(corrplot)) # Importing corrplot
 suppressWarnings(library(psych)) # Importing psych
 
-DB  <- read.csv("G:/My Drive/Movies_Emotion_Analysis/dataset.csv", row.names = 1) # Importing the data.
-                                                                                  # The first column is
-                                                                                  # row indexes, therefor
-                                                                                  # the argument row.names
-                                                                                  # is needed.
+DB  <- read.csv(file.choose(), row.names = 1) # Importing the data.
+                                              # The first column is
+                                              # row indexes, therefor
+                                              # the argument row.names
+                                              # is needed.
 
 DB$Subtitles <- NA # Adding an empty column to store all the subtitles.
 
