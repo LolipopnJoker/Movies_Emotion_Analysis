@@ -33,7 +33,8 @@ While only the third type of correlation will answer my research question, I thi
   * Repetitiveness - There is repetitiveness in some parts of the code, mainly in the data cleaning section. This repetitiveness doesn't stop the code from running but makes it harder to scale up if needed or detect bugs if something slightly changes in the code.
   * Using a relational database instead of a CSV file – as mentioned in the [Data sources section]( https://github.com/LolipopnJoker/Movies_Emotion_Analysis/blob/main/README.md#data-sources), I based this project on a publicly available dataset from Kaggle and all the subtitles for the movies. While the dataset from Kaggle is relatively small, it works fine with a CSV format. The subtitles, on the other hand, are hard to handle inside a CSV format due to their vast amounts of content.
 One of the improvements I am planning to add in the future is to build two things:
-    1.	A Python script that will retrieve the data from [IMDB's API]( https://developer.imdb.com/)
-    2.	A database to store all the data
+    1.	A Python script that will retrieve the data from [IMDB's API]( https://developer.imdb.com/).
+    2.	A database to store all the data (including variables such as the movie name, global profits, subtitles, etc.).
+Those steps will make the project constantly up to date, as I intend to make the Python script run automatically once a week.
 ## Repository structure
 ## Run Locally
