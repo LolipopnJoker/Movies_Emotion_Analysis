@@ -25,6 +25,7 @@ While only the third type of correlation will answer my research question, I thi
 ## Quick glance at the results
 * Correlation Matrix:
 ![](https://github.com/LolipopnJoker/Movies_Emotion_Analysis/blob/main/results/corr_matrix.jpeg)
+  * Out of all the correlations between emotions and the movie's profits, only the correlation between fear and profits was significant. In other words, we can say that  the more scary a movie is, the more profit it will make. 
 ## Lessons learned and recommendation
 ## Limitation and what can be improved
 ## Repository structure
