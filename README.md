@@ -13,7 +13,7 @@
 * [Run Locally](https://github.com/LolipopnJoker/Movies_Emotion_Analysis/blob/main/README.md#run-locally)
 ## Business problem
 In this project, I analyzed the correlation between emotions manifested in movies scripts and the profits from those movies. I started this project because of my huge passion to movies. But since I was a little child, I had a tendency to prefer horror movies on any other genre of movies. While some of my friends were also fond of the genre, many people don't seem to like horror movies that much. This entire subject raised a question in my head – is there relationship between the emotions embodied in the movie script and its gross-profits?
-## Data source
+## Data sources
 * [Top 1000 Highest Grossing Movies](https://www.kaggle.com/datasets/sanjeetsinghnaik/top-1000-highest-grossing-movies) - This dataset contains information about the top 1000 highest grossing holywood films. I took it from Kaggle.
 * [opensubtitles.org](https://www.opensubtitles.org/en/search/subs) - I used this website in order to download all the subtitles for the movies on the list.
 ## Methods
@@ -29,6 +29,11 @@ While only the third type of correlation will answer my research question, I thi
 ## Lessons learned and recommendation
 ## Limitation and what can be improved
 * Code - while my analysis code does run runs without errors, several improvements could be implemented:
+  * Scraping the subtitles instead of manually downloading them – the entire project relies on the subtitle files. Because my web-scraping abilities aren’t good enough, I manually downloaded all the subtitles files. One of the improvements I want to in this project is to write a Python script that will automatically scrape the subtitles based on movie names.
   * Repetitiveness - There is repetitiveness in some parts of the code, mainly in the data cleaning section. This repetitiveness doesn't stop the code from running but makes it harder to scale up if needed or detect bugs if something slightly changes in the code.
+  * Using a relational database instead of a CSV file – as mentioned in the [Data sources section]( https://github.com/LolipopnJoker/Movies_Emotion_Analysis/blob/main/README.md#data-sources), I based this project on a publicly available dataset from Kaggle and all the subtitles for the movies. While the dataset from Kaggle is relatively small, it works fine with a CSV format. The subtitles, on the other hand, are hard to handle inside a CSV format due to their vast amounts of content.
+One of the improvements I am planning to add in the future is to build two things:
+    1.	A Python script that will retrieve the data from [IMDB's API]( https://developer.imdb.com/)
+    2.	A database to store all the data
 ## Repository structure
 ## Run Locally
