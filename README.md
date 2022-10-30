@@ -29,6 +29,6 @@ While only the third type of correlation will answer my research question, I thi
 ## Lessons learned and recommendation
 ## Limitation and what can be improved
 * Code - while my analysis code does run runs without errors, several improvements could be implemented:
- * Repetitiveness - There is repetitiveness in some parts of the code, mainly in the data cleaning section. This repetitiveness doesn't stop the code from running but makes it harder to scale up if needed or detect bugs if something slightly changes in the code.
+  * Repetitiveness - There is repetitiveness in some parts of the code, mainly in the data cleaning section. This repetitiveness doesn't stop the code from running but makes it harder to scale up if needed or detect bugs if something slightly changes in the code.
 ## Repository structure
 ## Run Locally
