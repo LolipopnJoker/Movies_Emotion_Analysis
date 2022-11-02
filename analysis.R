@@ -9,14 +9,12 @@
 
 # Imports ------------------------------------------
 
-suppressWarnings(library(tidyverse)) # Importing tidyverse
-suppressWarnings(library(tm)) # Importing tm
-suppressWarnings(library(syuzhet)) # Importing syuzhet
-suppressWarnings(library(srt))# Importing srt
-suppressWarnings(library(glue)) # Importing glue
-suppressWarnings(library(corrplot)) # Importing corrplot
-suppressWarnings(library(psych)) # Importing psych
+## importing libraries -----------------------------
+libraries_to_import <- c("tidyverse", "tm", "syuzhet", "srt", "glue", "corrplot", "psych") # Creating a list with all the libraries names
 
+lapply(libraries_to_import, require, character.only = TRUE) # Last argument is used because the names of the libraries are strings
+
+## importing data ----------------------------------
 DB  <- read.csv(file.choose(), row.names = 1) # Importing the data.
                                               # The first column is
                                               # row indexes, therefor
