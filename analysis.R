@@ -25,9 +25,13 @@ DB$Subtitles <- NA # Adding an empty column to store all the subtitles.
 
 number_of_subtitles_files <- length(DB$Title)
 
-adding_subtitles <- function(){
+desktop_path <- file.path(Sys.getenv("USERPROFILE"),"Desktop")
+directory <- choose.dir(default = desktop_path, caption = "Select the direcotry's location")
+
+adding_subtitles <- function(directory_path = desktop_path){
   #' Adding the subtitles files to the data frame
   #' 
+  #' @param directory_path A string. The path to the directory on your local machine.
   #' @return A data frame with the subtitles of all the movies.
   #' 
   
@@ -40,7 +44,7 @@ adding_subtitles <- function(){
   for (i in 1:number_of_subtitles_files){
     # Using the try function in order to make the loop run even if an STR file isn't valid.
     try({
-      subtitle_path <- glue('G:/My Drive/Movies_Emotion_Analysis/subtitles/{i}.srt') # Path to the SRT file in position i
+      subtitle_path <- glue("{directory_path}\\subtitles\\{i}.srt") # Path to the SRT file in position i
       subtitle <- suppressWarnings(t(read_srt(subtitle_path))) # Importing the SRT file in position i in a vertical matrix
       subtitle <- as.data.frame(subtitle) # Turning it into a data frame
       subtitle <- unite(subtitle, col = "subtitles", 1:ncol(subtitle), remove = TRUE, sep = " ") # Turning the matrix to 1X1
@@ -58,7 +62,7 @@ adding_subtitles <- function(){
   
 }
 
-adding_subtitles()
+adding_subtitles(directory_path = directory)
 
 # Data Cleaning ------------------------------------
 
