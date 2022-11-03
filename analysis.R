@@ -66,10 +66,6 @@ adding_subtitles(directory_path = directory)
 
 # Data Cleaning ------------------------------------
 
-# Splitting the date column
-DB <- separate(DB, Release.Date, c("release.month", "release.day", "release.year"), sep = " ") # Separating the date column
-DB <- separate(DB, Genre, c("Genre.1", "Genre.2", "Genre.3", "Genre.4", "Genre.5", "Genre.6"), sep = ", ")# Separating the genre column
-
 # Cleaning from unwanted symbols that might affect the analysis.
 DB[] <- lapply(DB, gsub, pattern=',', replacement='') # Deleting all the , symbols.
 DB[] <- lapply(DB, gsub, pattern="'", replacement='') # Deleting all the ' symbols.
